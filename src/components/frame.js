@@ -5,12 +5,16 @@ import closeicon from '../assets/closeicon.png';
 
 const Frame = () => {
 
+    const Wrapper = styled.div`
+    --framecolor: #00000010;
+    `
+
     const Framediv = styled.div`
     -webkit-user-select: none;
     -webkit-app-region: drag;
-    width:770px;
+    width:470px;
     height:25px;
-    background-color: #1A1D21;
+    background-color: var(--framecolor);
     position:fixed;
     margin-right:30px;
     `
@@ -19,7 +23,7 @@ const Frame = () => {
     const CloseWrapper = styled.button`
     width:30px;
     height:25px;
-    background-color: #1A1D21;
+    background-color: var(--framecolor);
     position:fixed;
     border:0;
     outline:0;
@@ -50,11 +54,11 @@ const Frame = () => {
     }
 
     return (
-        <>
+        <Wrapper>
             <CloseBTN />
             <Framediv />
 
-        </>
+        </Wrapper>
     )
 }
 export default Frame;
