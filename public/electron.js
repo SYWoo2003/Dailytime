@@ -14,13 +14,14 @@ function createWindow() {
         height: 600,
         kiosk: !isDev,
         resizable: false,
-        frame: false,
+        frame: true,
+        fullscreen: false,
         webPreferences: {
             nodeIntegration: true
         }
     });
 
-
+    mainWindow.setMenuBarVisibility(false)
 
     mainWindow.once('ready-to-show', () => {
         mainWindow.show()
