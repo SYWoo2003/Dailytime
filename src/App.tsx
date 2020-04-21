@@ -1,14 +1,25 @@
 import React from 'react';
-import styled from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
-import Frame from './components/frame';
+
+import Table from './components/table';
+import Footer from './components/footer';
 
 function App() {
 
+  const GlobalStyles = createGlobalStyle`
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+    
+    body{
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+  `;
 
   return (
     <>
-      <Frame />
+      <GlobalStyles />
+      <Table />
+      <Footer />
     </>
   );
 }
